@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.freemind.app" version="11.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<name>FreeMind</name>
+<description>
+FreeMind Meditations is dedicated to making meditation easy, inspiring and energising. Enabling you to enjoy more success and happiness everywhere you go.
+</description>
+<author email="dev@cordova.apache.org" href="http://cordova.io">
+   FreeMind
+</author>
+<content src="index.html" />
+<plugin name="cordova-plugin-whitelist" source="npm" />
+<access origin="*"/>
+<preference name="pgb-builder-version" value="2" />
+<!--<preference name="phonegap-version" value='cli-7.1.0' />
+<preference name="phonegap-version" value='cli-8.0.0' />-->
+<preference name="phonegap-version" value='cli-9.0.0' />
+<preference name="android-build-tool" value="gradle" />
+<preference name="DisallowOverscroll" value="true" />
+
+
+
+
+<preference name="android-minSdkVersion" value="20" />
+<preference name="android-targetSdkVersion" value="28" />
+
+<plugin name="cordova-plugin-ionic-webview" source="npm"/>
+<plugin name="cordova-plugin-ionic-keyboard" source="npm"/>
+
+
+
+
+
+
+
+
+
+
+<preference name="WKWebViewOnly" value="true" />
+
+<preference name="KeyboardResize" value="false" />
+<!--<preference name="swift-version" value="4.2"/>
+<preference name="UseLegacySwiftLanguageVersion" value="true" />-->
+
+
+
+<!--<plugin name="cordova-plugin-health" source="npm">
+  <variable name="HEALTH_READ_PERMISSION" value="FreeMind needs read access"/>
+  <variable name="HEALTH_WRITE_PERMISSION" value="FreeMind needs write access"/>
+  <variable name="GMS_VERSION" value="16.0.1"/>
+</plugin>
+
+<config-file platform="ios" parent="NSHealthShareUsageDescription">
+  <string>FreeMind needs read access</string>
+</config-file>
+
+<config-file platform="ios" parent="NSHealthUpdateUsageDescription">
+  <string>FreeMind needs write access</string>
+</config-file>-->
+
+<!--<plugin spec="https://github.com/EddyVerbruggen/HealthKit" />-->
+
+
+
+
+ 
+<!--<platform name="ios">
+    <plugin name="com.telerik.plugins.healthkit"  source="npm" >
+        <variable name="HEALTH_READ_PERMISSION" value="App needs read access" />
+        <variable name="HEALTH_WRITE_PERMISSION" value="App needs write access" />
+    </plugin>        
+</platform>-->
+
+
+<!--<plugin name="cordova-plugin-tag-manager" source="npm" />-->
+
+<!--<plugin name="cordova-plugin-speechrecognition" source="npm" />-->
+
+<!--<preference name="android-minSdkVersion" value="16" />
+<preference name="android-targetSdkVersion" value="23" />-->
+
+
+
+
+<plugin spec="https://github.com/phiasco12/firebase" />
+<platform name="ios">
+  <resource-file src="GoogleService-Info.plist" target="app/GoogleService-Info.plist" />
+  <resource-file src="GTM-FVTKK2S.json" target="app/GTM-FVTKK2S.json" />
+</platform>
+
+
+
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-vibration
+cordova plugin add cordova-plugin-media@3.0.1
+
+
+cordova plugin add cordova-plugin-file-transfer@1.6.3
+cordova plugin add cordova-plugin-x-socialsharing
+cordova plugin add cordova-plugin-network-information
+cordova plugin add cordova-plugin-spinner
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-inapppurchase-fixed
+
+
+
+
+<plugin name="cordova-plugin-whitelist" source="npm" />
+<plugin name="cordova-plugin-splashscreen" source="npm"/>
+<plugin name="cordova-plugin-dialogs" source="npm"/>
+<plugin name="cordova-plugin-vibration" source="npm"/>
+<plugin name="cordova-plugin-media" spec="~3.0.1" />
+<plugin name="cordova-plugin-file-transfer" spec="~1.6.3"/>
+<plugin name="cordova-plugin-file" source="npm" />
+<plugin name="cordova-plugin-x-socialsharing" source="npm" />
+<plugin name="cordova-plugin-network-information" source="npm" />
+<plugin name="cordova-plugin-spinner" source="npm" />
+<plugin name="cordova-plugin-device" source="npm"/>
+<plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media" />
+<plugin name="cordova-plugin-inappbrowser" source="npm" />
+
+<plugin name="cordova-plugin-background-mode-appstronauts" source="npm" />
+
+
+<plugin spec="https://github.com/wootwoot1234/cordova-plugin-ignore-mute-switch.git" />
+<!--<plugin name="cordova-plugin-ignoremuteswitch" source="npm" />-->
+<feature name="BackgroundAudio">
+  <param name="ios-package" value="BackgroundAudio" />
+  <param name="onload" value="true" />
+</feature>
+
+
+<plugin spec="https://github.com/katzer/cordova-plugin-local-notifications.git" />
+<plugin name="cordova-plugin-statusbar" source="npm"/> 
+<plugin name="cordova-plugin-inapppurchase-fixed" source="npm" />
+
+
+<!--<plugin name="cordova-support-google-services" source="npm"  />-->
+
+<!--<plugin name="phonegap-plugin-push" source="npm">
+      <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.1.1" />
+        <variable name="FCM_VERSION" value="17.1.0" />
+</plugin>-->
+
+cordova plugin add cordova-plugin-contacts --variable CONTACTS_USAGE_DESCRIPTION="FreeMind needs contacts access to search friends and send SMS invitation."
+ 
+
+<plugin name="cordova-plugin-contacts" source="npm" />
+<edit-config target="NSContactsUsageDescription" file="*-Info.plist" mode="merge">
+    <string>FreeMind needs contacts access to search friends and send SMS invitation.</string>
+</edit-config>
+ 
+<platform name="ios">
+ <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+    <array>
+        <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>FreeMind</string>
+          </array>
+        </dict>
+    </array>
+</config-file>
+</platform>
+
+<splash src="splash.png" />
+
+<platform name="ios">
+
+
+<!--<plugin name="cordova-plugin-facebook4" spec="6.0.0">
+    <params>
+       <param name="APP_ID" value="456593391497381" />
+       <param name="APP_NAME" value="FreeMind" />
+    </params>
+ </plugin>-->
+
+<!--<plugin spec="https://github.com/phiasco12/mindfulness" />
+
+<edit-config target="NSHealthShareUsageDescription" file="*-Info.plist" mode="merge">
+    <string>FreeMind needs read access.</string>
+</edit-config>
+ 
+ <edit-config target="NSHealthUpdateUsageDescription" file="*-Info.plist" mode="merge">
+    <string>FreeMind needs write access.</string>
+</edit-config>-->
+
+	<icon height="57" platform="ios" src="res/icons/ios/icon.png" width="57" />
+	<icon height="114" platform="ios" src="res/icons/ios/icon@2x.png" width="114" />
+	<icon height="40" platform="ios" src="res/icons/ios/icon-40.png" width="40" />
+	<icon height="80" platform="ios" src="res/icons/ios/icon-40@2x.png" width="80" />
+	<icon height="50" platform="ios" src="res/icons/ios/icon-50.png" width="50" />
+	<icon height="100" platform="ios" src="res/icons/ios/icon-50@2x.png" width="100" />
+	<icon height="60" platform="ios" src="res/icons/ios/icon-60.png" width="60" />
+	<icon height="120" platform="ios" src="res/icons/ios/icon-60@2x.png" width="120" />
+	<icon height="180" platform="ios" src="res/icons/ios/icon-60@3x.png" width="180" />
+	<icon height="72" platform="ios" src="res/icons/ios/icon-72.png" width="72" />
+	<icon height="144" platform="ios" src="res/icons/ios/icon-72@2x.png" width="144" />
+	<icon height="76" platform="ios" src="res/icons/ios/icon-76.png" width="76" />
+	<icon height="152" platform="ios" src="res/icons/ios/icon-76@2x.png" width="152" />
+	<icon height="29" platform="ios" src="res/icons/ios/icon-small.png" width="29" />
+	<icon height="58" platform="ios" src="res/icons/ios/icon-small@2x.png" width="58" />
+	<icon height="87" platform="ios" src="res/icons/ios/icon-small@3x.png" width="87" />
+	<icon platform="ios" src="res/icons/ios/icon-83.5@2x.png" width="167" height="167"/>
+    <icon platform="ios" src="res/icons/ios/iTunesArtwork@2x.png" width="1024" height="1024" />
+	
+	<!--<splash height="1136" platform="ios" src="res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+	<splash height="1334" platform="ios" src="res/screen/ios/Default-667h.png" width="750" />
+	<splash height="2208" platform="ios" src="res/screen/ios/Default-736h.png" width="1242" />
+	<splash height="1242" platform="ios" src="res/screen/ios/Default-Landscape-736h.png" width="2208" />
+	<splash height="1536" platform="ios" src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" />
+	<splash height="768" platform="ios" src="res/screen/ios/Default-Landscape~ipad.png" width="1024" />
+	<splash height="2048" platform="ios" src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
+	<splash height="1024" platform="ios" src="res/screen/ios/Default-Portrait~ipad.png" width="768" />
+	<splash height="960" platform="ios" src="res/screen/ios/Default@2x~iphone.png" width="640" />
+	<splash height="480" platform="ios" src="res/screen/ios/Default~iphone.png" width="320" />-->
+    <!--<splash src="res/screen/ios/Default@2x~universal~anyany.png" />
+    <splash src="res/screen/ios/Default@2x~universal~comany.png" />
+    <splash src="res/screen/ios/Default@2x~universal~comcom.png" />
+    <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
+    <splash src="res/screen/ios/Default@3x~universal~anycom.png" />
+    <splash src="res/screen/ios/Default@3x~universal~comany.png" />-->
+	
+	
+ <splash src="res/screen/ios/Default@2x~iphone~anyany.png" />
+ <splash src="res/screen/ios/Default@2x~iphone~comany.png" />
+ <splash src="res/screen/ios/Default@2x~iphone~comcom.png" />
+ <splash src="res/screen/ios/Default@3x~iphone~anyany.png" />
+ <splash src="res/screen/ios/Default@3x~iphone~anycom.png" />
+ <splash src="res/screen/ios/Default@3x~iphone~comany.png" />
+ <splash src="res/screen/ios/Default@2x~ipad~anyany.png" />
+ <splash src="res/screen/ios/Default@2x~ipad~comany.png" />
+</platform>
+
+
+
+<preference name="StatusBarStyle" value="lightcontent" />
+<preference name="StatusBarOverlaysWebView" value="false" />
+<preference name="target-device" value="universal" />
+<preference name="target-device" value="handset"/>
+<preference name="AllowInlineMediaPlayback" value="true" />
+<preference name="ShowSplashScreenSpinner" value="true"/>
+<preference name="SplashScreen" value="screen" />
+<preference name="SplashScreenDelay" value="5000" />
+<preference name="LoadUrlTimeoutValue" value="70000"/>
+<preference name="auto-hide-splash-screen" value="false" />
+<preference name="AutoHideSplashScreen" value="false" />
+<preference name="OpenAllWhitelistURLsInWebView" value="true" />
+<preference name="FadeSplashScreen" value="true" />
+<preference name="fade-splash-screen-duration" value="1" />
+<preference name="orientation" value="portrait" />
+<preference name="MediaPlaybackRequiresUserAction" value="false" />  
+<allow-navigation href="*youtube*" />
+<allow-navigation href="*ytimg*" />
+<allow-navigation href="*://*youtube.com" />
+<allow-navigation href="*://*vimeo.com" />
+<allow-navigation href="*vimeo*" />
+<allow-navigation href="https://petposerspro.co.uk/" />
+<allow-navigation href="*" />
+<allow-navigation href="http://vjs.zencdn.net/" />
+
+</widget>
